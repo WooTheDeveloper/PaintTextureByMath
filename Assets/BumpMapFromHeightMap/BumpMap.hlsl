@@ -18,7 +18,6 @@ sampler2D _HeightMap;
 float4 _HeightMap_ST;
 float4 _HeightMap_TexelSize;
 float _BumpScale;
-float _RealScopeSize;
 float _RotateAngle;
 
 v2f vert (appdata v)
