@@ -58,7 +58,7 @@
 
                 float2 xy = col.xy;
                 xy = xy * 2 - 1;
-                xy = mul(float2x2(i.inverseRotateMatrix.xy,i.inverseRotateMatrix.zw),xy);
+                xy = mul(float2x2(i.inverseRotateMatrix.xy,i.inverseRotateMatrix.zw),xy); // 由于看上去是发生了顺时针旋转，所以它的法线方向真的得发生顺时针旋转，哈哈哈哈
                 xy = xy * 0.5 + 0.5;
                 col.rg = xy; 
                 
