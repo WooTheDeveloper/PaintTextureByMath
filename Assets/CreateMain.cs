@@ -34,7 +34,9 @@ public class CreateMain : MonoBehaviour
         File.WriteAllBytes(path,bytes);
         AssetDatabase.Refresh();
         //var importer = AssetImporter.GetAtPath(path) as TextureImporter;
-        return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        newTex = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        Selection.activeObject = newTex;
+        return newTex;
     }
     
 }
